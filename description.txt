@@ -1,0 +1,29 @@
+Hey PipeKit Team!
+
+1. In routes.js, I used the normalizeHtml function from the jsdom package.
+2. In React, redux applications prefer to use normalized data structures
+for displaying tree view elements.
+3. The following DOM structure was created using normalizeHtml:
+
+const nodes = {
+    1: {
+       nodeName: 'body',
+       children: [2, 3]
+    },
+    2: {
+        nodeName: 'div',
+        children: []
+    },
+    3: {
+        nodeName: 'div',
+        children: []
+    },
+    ...
+};
+
+4. I created TreeItem component to render this structure on the client side
+5. TreeItem is using Node, Icon, Indent - components
+6. I did not use CSS because there was an issue importing it in react components,
+   It seems some package is missing, so I didn't waste time on that, just used inline styles instead
+
+Looking forward to hearing feedback from you.
